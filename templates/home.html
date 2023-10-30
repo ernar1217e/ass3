@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+{% for post in posts %}
+        <h1>{{ post.tittle }}</h1>
+        <p>By {{ post.authors }} on {{ post.date_posted }}</p>
+        <p>{{ post.works }}</p>
+        <p>boy is: {{ post.authors }},he's birthday: {{ post.date_posted }}</p>
+    {% endfor %}
+
+    {% for put in contac %}
+        <h1>{{ put.sort }}</h1>
+        <p>{{put.authors}}'s phone number:{{put.numbers}}</p>
+        <p>{{put.emails}}</p>
+    {% endfor %}
+{% endblock%}
